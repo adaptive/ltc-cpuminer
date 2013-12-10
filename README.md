@@ -1,6 +1,6 @@
 # docker-ltc-cpuminer
 
-Docker Image for a Litecoin CPU Minter for Stratum Pools. It uses
+Docker Image for a Litecoin CPU Miner for Stratum Pools. It uses
 * [pooler/cpuminer](https://github.com/pooler/cpuminer) as the CPU Miner and
 * [CryptoManiac/stratum-mining-proxy](https://github.com/CryptoManiac/stratum-mining-proxy) as the proxy to connect to stratum pools
 

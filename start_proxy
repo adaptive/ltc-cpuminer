@@ -1,0 +1,2 @@
+#!/bin/bash
+/opt/stratum-mining-proxy/mining_proxy.py -o $POOL_HOST -p $POOL_PORT

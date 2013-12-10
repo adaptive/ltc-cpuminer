@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd /opt
+chown -R root:root *
+chmod +x start_*
+
+# Fetch minerd and CryptoManiac's stratum proxy
+wget -qO- http://sourceforge.net/projects/cpuminer/files/pooler-cpuminer-2.3.2-linux-x86_64.tar.gz/download | tar xzf -
+wget -qO- --no-check-certificate https://github.com/CryptoManiac/stratum-mining-proxy/tarball/master | tar xzf -
+mv CryptoManiac-stratum-mining-proxy-* stratum-mining-proxy
+
+# Build and install stratum proxy
+cd stratum-mining-proxy && \
+python distribute_setup.py && \
+cd litecoin_scrypt && \
+python setup.py install && \
+cd .. && \
+python setup.py develop && \
+chmod +x mining_proxy.py && \
+cd midstatec && make

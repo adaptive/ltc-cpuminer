@@ -5,11 +5,6 @@ MAINTAINER David Zumbrunnen <zumbrunnen@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get -qq update
-RUN apt-get -yqq upgrade
-RUN apt-get -yqq install supervisor
-
 RUN apt-get -yqq install wget python-dev make gcc
 ADD supervisor.conf /etc/supervisor/conf.d/proxy_mining.conf
 ADD start_proxy /opt/start_proxy

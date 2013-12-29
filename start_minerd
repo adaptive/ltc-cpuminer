@@ -1,3 +1,0 @@
-#!/bin/bash
-
-/opt/minerd -u $MINING_USER -p $MINING_PASSWORD -t $NUM_THREADS -o $MINING_URL

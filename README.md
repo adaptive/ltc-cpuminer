@@ -11,7 +11,7 @@ Start this image with the settings (pool address, worker user/password) as param
 ### Example for www.wemineltc.com
 
 ```shell
-docker run -d zumbrunnen/ltc-cpuminer -u worker.1 -p password -t 7 -o stratum+tcp://gigahash.wemineltc.com:3333
+docker run -d adaptive/ltc-cpuminer -u worker.1 -p password -t 7 -o stratum+tcp://gigahash.wemineltc.com:3333
 ```
 
 See `minerd --help` for more parameters.
